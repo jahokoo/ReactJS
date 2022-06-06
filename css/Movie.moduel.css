@@ -1,0 +1,77 @@
+body {
+    margin : 0px 5%;
+    background-color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a :hover{
+    color:#fff;
+}
+
+span {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+h4 {
+    color:#fff;
+    height: 19.5px;
+    margin: 5px 0px 1px;
+    overflow: auto;
+    text-overflow: ellipsis;
+    backface-visibility: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+#movie {
+    width: 300px;
+    height: 500px;
+    text-align: center;
+    margin: 10px 0px;
+    padding: 30px 0px;
+    
+}
+#movie :hover{
+    background-color: #000;
+    opacity: 70%;
+    transition: all 1s;
+}
+    
+.poster{
+    -webkit-box-reflect: below 30px linear-gradient(transparent, rgba(0,0,0,0), rgba(0,0,0,0.3));
+
+}
+.img_container :hover {
+   
+    
+} 
+
+/*------- Swiper slider --------- */
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: -webkit-center;
+  }
+  
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+  
+

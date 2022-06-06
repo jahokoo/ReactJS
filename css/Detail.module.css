@@ -1,0 +1,12 @@
+body{
+    color:#fff;
+}
+
+li{
+    list-style: none;
+    display: flex;
+}
+
+.second_img{
+    opacity: 60%;
+}
