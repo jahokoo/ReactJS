@@ -1,12 +1,42 @@
-body{
+.container{
     color:#fff;
 }
 
-li{
-    list-style: none;
-    display: flex;
+.ul{
+    background-color: #000;
+    padding:0px;
 }
 
-.second_img{
-    opacity: 60%;
+li{
+    list-style:none;
+    display: inline;
+    padding-bottom: 5px;
+}
+li::after{
+    border-right: 1px solid #fff;
+}
+.title{
+    position: relative;
+}
+.detail__top img:first-child{
+    z-index: 2;
+    position: relative;
+    transform: rotateY(20deg);
+    box-shadow: -5px 5px 25px 3px rgb(51 51 51)
+
+}
+.detail__top img:last-child{
+    position: absolute;
+    opacity: 50%;
+    left: 10%;
+    top: 5%;
+    display: inline;
+}
+
+.detail__bottom {
+    position:relative;
+}
+
+.overview{
+    width: 65%;
 }

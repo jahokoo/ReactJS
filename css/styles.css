@@ -1,0 +1,11 @@
+/*------- Swiper slider --------- */
+
+.swiper {
+    width: 100%;
+    text-align: -webkit-center;
+    --swiper-theme-color: rgb(142, 26, 26);
+    
+}
+.swiper-button-next, .swiper-button-prev{
+    top:38%;
+}

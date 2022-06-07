@@ -1,8 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Detail from "./routes/Detail";
 import Home from "./routes/Home";
-import styles from "./css/Movie.moduel.css"
-import "swiper/css/bundle";
 import Header from "./Header";
 
 function App() {
