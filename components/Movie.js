@@ -26,6 +26,7 @@ function Movie({ poster_path, title, average, id }) {
                 <span className={styles.movie__average}>⭐️ {average}</span>
             </div>
         </div>
+        
     );
 }
 Movie.propTypes = {

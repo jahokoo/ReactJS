@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { DATA_URL, KEY } from "./Home"
 import styles from "../css/Detail.module.css"
 import Header from "../components/Header";
+import Loader from "../components/Loader";
 
 function Detail() {
     const [loading, setLoading] = useState(true);
@@ -20,10 +21,10 @@ function Detail() {
     }, []);
 console.log(details)
     return (
-        <div>{loading ? <h1 className="loading">Loading...</h1> :
+        <div>{loading ? <Loader/> :
             <div className={styles.container}>
                 <Header />
-                <div className={styles.detail__top} style={{backgroundImage:`url(https://image.tmdb.org/t/p/w500${details.backdrop_path})`}}>
+                <div className={styles.detail__top} style={{backgroundImage:`url(https://image.tmdb.org/t/p/original${details.backdrop_path})`}}>
                 <img src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt={details.title} />
                 {/* <img src={`https://image.tmdb.org/t/p/w500${details.backdrop_path}`} alt={details.title} /> */}
                 </div>

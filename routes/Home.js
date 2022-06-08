@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "../css/styles.css";
-
+import Loader from "../components/Loader";
 // import required modules
 import { EffectCoverflow, Navigation, Mousewheel } from "swiper";
 
@@ -15,13 +15,19 @@ export const DATA_URL = "https://api.themoviedb.org/3/movie/";
 function Home() {
     const [loading, setLoading] = useState(true);
     const [movies, setMovies] = useState([])
+    const [pages, setPages] = useState([])
+    const moreView = ()=>{
+
+    }
     const getMovies = async () => {
         const json = await (
             await fetch(
                 `${DATA_URL}popular?api_key=${KEY}`)
         ).json();
         setMovies(json.results);
+        setPages(json.page);
         setLoading(false);
+        console.log(json.page)
     }
 
     useEffect(() => {
@@ -32,8 +38,7 @@ function Home() {
     return (
         <div>
             
-            {loading ? <div className="loading">Loading...</div> :
-            
+            {loading ? <Loader/>:
                 <div><Header /> </div>}
 
              <Swiper
@@ -75,6 +80,7 @@ function Home() {
          </Swiper> 
         
         </div>
+   
     );
 }
 

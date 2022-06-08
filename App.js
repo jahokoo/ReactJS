@@ -5,7 +5,7 @@ import Header from "./components/Header";
 
 function App() {
   return (
-  <Router >
+  <Router basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route element={<Header/>}/>
       <Route path="/" element={<Home/>} />
