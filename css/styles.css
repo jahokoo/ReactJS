@@ -1,11 +1,93 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000;
+    margin: 0px 5%;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
 /*------- Swiper slider --------- */
 
 .swiper {
     width: 100%;
     text-align: -webkit-center;
     --swiper-theme-color: rgb(142, 26, 26);
-    
 }
-.swiper-button-next, .swiper-button-prev{
-    top:38%;
+
+
+.swiper-button-next,
+.swiper-button-prev {
+    top: 38%;
+}
+
+/* header */
+.header {
+    font-size: 36px;
+    color: rgb(142 26 26);
+    padding: 30px;
+    font-style: oblique;
+    text-align: center;
+    text-shadow: 1px 3px #333;
+    z-index: 99;
+    position: relative;
+    background-color: #000;
+    transition: all 1s;
+}
+
+.header:hover {
+    color: #fff;
+    text-shadow: 5px 5px 10px #fff;
+}
+
+/* -----Loading ------*/
+.loading,
+.loading:after {
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+}
+
+.loading {
+    top: 50%;
+    left: 50%;
+    margin: 60px auto;
+    font-size: 10px;
+    position: absolute;
+    text-indent: -9999em;
+    border-top: 1.1em solid rgb(142 26 26);
+    border-right: 1.1em solid rgb(142 26 26);
+    border-bottom: 1.1em solid rgb(142 26 26);
+    border-left: 1.1em solid #ffffff;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+}
+
+@-webkit-keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }

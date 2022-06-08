@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 function Movie({ poster_path, title, average, id }) {
     return (
 
-        <div >
+        <div>
             <div id={styles.movie}>
                 <Link to={`/movie/${id}`}>
                     <div className={styles.img__container}>
