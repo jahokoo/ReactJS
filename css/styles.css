@@ -24,7 +24,6 @@ a {
 /* header */
 .header {
   font-size: 36px;
-  color: rgb(142, 26, 26);
   padding: 30px;
   font-style: oblique;
   text-align: center;
@@ -33,11 +32,17 @@ a {
   position: relative;
   background-color: #000;
   transition: all 1s;
+  margin-bottom:100px;
 }
 
-.header:hover {
+.header a {
+  transition: all 1s;
+  color: rgb(142, 26, 26);
+}
+
+.header a:hover {
   color: #fff;
-  text-shadow: 5px 5px 10px #fff;
+  text-shadow: 5px 5px 10px rgb(142, 26, 26);
 }
 
 /* -----Loading ------*/

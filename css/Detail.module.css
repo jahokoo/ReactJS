@@ -4,6 +4,7 @@
 
 .ul{
     padding:0px;
+    margin-bottom:100px;
 }
 
 li{
@@ -25,23 +26,16 @@ li::after{
     text-align: center;
     background-size:cover;
 }
-.detail__top img:first-child{
+.detail__top img{
     z-index: 2;
     top:100px;
     position: relative;
     box-shadow: -5px 5px 25px 3px rgb(51 51 51)
 
 }
-/* .detail__top img:last-child{
-    position: absolute;
-    opacity: 50%;
-    left: 18%;
-    top: 20%;
-    display: inline;
-} */
 
 .detail__bottom {
-    margin-top: 200px;
+    margin-top: 150px;
     left:15%;
     position:absolute;
 }
@@ -53,4 +47,7 @@ li::after{
 .vote_average{
     margin-left: 15px;
     color: gold;
+}
+.runtime{
+    margin-left : 10px;
 }

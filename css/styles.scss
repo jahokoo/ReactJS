@@ -29,7 +29,6 @@ a {
 /* header */
 .header {
     font-size: 36px;
-    color: $maincolor;
     padding: 30px;
     font-style: oblique;
     text-align: center;
@@ -39,10 +38,14 @@ a {
     background-color: #000;
     transition: all 1s;
 }
+.header a {
+  transition: all 1s;
+  color: $maincolor
+}
 
-.header:hover {
-    color: #fff;
-    text-shadow: 5px 5px 10px #fff;
+.header a:hover {
+  color: #fff;
+  text-shadow: 5px 5px 10px $maincolor
 }
 
 /* -----Loading ------*/

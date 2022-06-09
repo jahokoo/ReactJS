@@ -15,37 +15,29 @@ export const DATA_URL = "https://api.themoviedb.org/3/movie/";
 function Home() {
     const [loading, setLoading] = useState(true);
     const [movies, setMovies] = useState([])
-    const [pages, setPages] = useState([])
-    const moreView = ()=>{
 
-    }
     const getMovies = async () => {
         const json = await (
             await fetch(
                 `${DATA_URL}popular?api_key=${KEY}`)
         ).json();
         setMovies(json.results);
-        setPages(json.page);
         setLoading(false);
-        console.log(json.page)
     }
 
     useEffect(() => {
         getMovies();
     }, [])
-
-    console.log(movies)
     return (
         <div>
-            
             {loading ? <Loader/>:
-                <div><Header /> </div>}
+                <div><Header/> </div>}
 
              <Swiper
              effect={"coverflow"}
              grabCursor={true}
              centeredSlides={true}
-             slidesPerView={2}
+             slidesPerView={2} // 
              coverflowEffect={{
                  rotate: 10, // 회전각도
                  stretch: 0,
@@ -65,7 +57,6 @@ function Home() {
                     slidesPerView:4
                  }
              }}
-        
          > 
              <div className="container">
                  {movies.map(movie =>
