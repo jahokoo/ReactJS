@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "../css/styles.css";
 import Loader from "../components/Loader";
+
 // import required modules
 import { EffectCoverflow, Navigation, Mousewheel } from "swiper";
 
@@ -14,8 +15,11 @@ export const DATA_URL = "https://api.themoviedb.org/3/movie/";
 
 function Home() {
     const [loading, setLoading] = useState(true);
-    const [movies, setMovies] = useState([])
-
+    const [movies, setMovies] = useState([]);
+    const [search, setSearch] = useState("");
+    const onChange=(e)=>{
+     setSearch(e.target.value)
+    }
     const getMovies = async () => {
         const json = await (
             await fetch(
@@ -28,6 +32,8 @@ function Home() {
     useEffect(() => {
         getMovies();
     }, [])
+
+
     return (
         <div>
             {loading ? <Loader/>:
@@ -69,6 +75,7 @@ function Home() {
                              average={movie.vote_average}
                          /> </SwiperSlide>)} </div>
          </Swiper> 
+
         
         </div>
    

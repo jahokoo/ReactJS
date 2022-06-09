@@ -27,6 +27,7 @@ function Movie({ poster_path, title, average, id }) {
             </div>
         </div>
         
+        
     );
 }
 Movie.propTypes = {
