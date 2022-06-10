@@ -29,7 +29,7 @@ function Movie({ poster_path, title, average, id }) {
         
         
     );
-}
+};
 Movie.propTypes = {
     id: PropTypes.number.isRequired,
     poster_path: PropTypes.string.isRequired,

@@ -16,10 +16,7 @@ export const DATA_URL = "https://api.themoviedb.org/3/movie/";
 function Home() {
     const [loading, setLoading] = useState(true);
     const [movies, setMovies] = useState([]);
-    const [search, setSearch] = useState("");
-    const onChange=(e)=>{
-     setSearch(e.target.value)
-    }
+ 
     const getMovies = async () => {
         const json = await (
             await fetch(
@@ -34,10 +31,11 @@ function Home() {
     }, [])
 
 
+
     return (
         <div>
             {loading ? <Loader/>:
-                <div><Header/> </div>}
+                <div><Header/>
 
              <Swiper
              effect={"coverflow"}
@@ -75,12 +73,14 @@ function Home() {
                              average={movie.vote_average}
                          /> </SwiperSlide>)} </div>
          </Swiper> 
-
-        
+         </div>
+            }
+            
         </div>
+
    
     );
-}
+        }
 
 
 export default Home;

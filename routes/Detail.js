@@ -4,6 +4,7 @@ import { DATA_URL, KEY } from "./Home"
 import styles from "../css/Detail.module.css"
 import Header from "../components/Header";
 import Loader from "../components/Loader";
+import Details from "../components/Details";
 
 function Detail() {
     const [loading, setLoading] = useState(true);
@@ -13,31 +14,26 @@ function Detail() {
         const json = await (
             await fetch(`${DATA_URL}${id}?api_key=${KEY}`)
         ).json();
-        setLoading(false)
-        setDetails(json)
+        setDetails(json);
+        setLoading(false);
+       
     };
     useEffect(() => {
         getMovie();
     }, []);
-
     return (
         <div>{loading ? <Loader /> :
-            <div className={styles.container}>
-                <Header />
-                <div className={styles.detail__top} style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original${details.backdrop_path})` }}>
-                    <img src={`https://image.tmdb.org/t/p/w300${details.poster_path}`} alt={details.title} />
-                </div>
-                <div className={styles.detail__bottom}>
-                    <h2 className={styles.title}>{details.title}</h2>
-                    <span>{details.release_date}</span>
-                    <span className={styles.runtime}>Runtime ({details.runtime}m)</span>
-                    <span className={styles.vote_average}>⭐️ {details.vote_average}</span>
-                    <ul className={styles.ul}>{details.genres.map((g) =>
-                        (<li key={g.id}> {g.name} </li>))}
-                        <p className={styles.overview}>{details.overview}</p>
-                    </ul>
-                </div>
-
+            <div> <Header />
+                    <Details
+                    title={details.title}
+                    backdrop_path={details.backdrop_path}
+                    poster_path={details.poster_path}
+                    release_date={details.release_date}
+                    runtime={details.runtime}
+                    vote_average={details.vote_average}
+                    genres={details.genres}
+                    overview={details.overview}
+                        />
             </div>
         }</div>
     )

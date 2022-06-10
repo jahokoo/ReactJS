@@ -2,6 +2,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #000;
   margin: 0px 5%;
+  color: #fff;
 }
 
 a {
@@ -13,26 +14,24 @@ a {
 .swiper {
   width: 100%;
   text-align: -webkit-center;
-  --swiper-theme-color: $maincolor;
+  --swiper-theme-color: rgb(142, 26, 26);
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  top: 38%;
+  top: 43%;
 }
 
 /* header */
 .header {
-  font-size: 36px;
-  padding: 30px;
-  font-style: oblique;
-  text-align: center;
-  text-shadow: 1px 3px #333;
+  display: flex;
+  font-size: 20px;
+  align-items: center;
   z-index: 99;
   position: relative;
   background-color: #000;
   transition: all 1s;
-  margin-bottom:100px;
+  margin: 10px 0px 10%;
 }
 
 .header a {
@@ -43,6 +42,15 @@ a {
 .header a:hover {
   color: #fff;
   text-shadow: 5px 5px 10px rgb(142, 26, 26);
+}
+
+.search {
+  margin-left: 100px;
+}
+
+.login {
+  position: absolute;
+  right: 1px;
 }
 
 /* -----Loading ------*/
