@@ -1,44 +1,52 @@
 import Loader from "../components/Loader";
 import Movie from "../components/Movie";
-import {useState,useEffect} from "react"
+import { useState, useEffect } from "react"
 import { DATA_URL, KEY } from "./Home";
+import Header from "../components/Header";
+import SearchBar from "../components/SearchBar";
+import styles from "../css/Search.module.css";
 
 function Search() {
     const [loading, setLoading] = useState(true);
     const [movies, setMovies] = useState([]);
     const [search, setSearch] = useState("");
-    const onChange =(e)=>{
+    const onChange = ((e) => {
         setSearch(e.target.value)
-    }
+    })
     const getMovie = async () => {
         const json = await (
             await fetch(`${DATA_URL}popular?api_key=${KEY}`)
         ).json();
         setLoading(false)
         setMovies(json.results)
-
     };
     useEffect(() => {
         getMovie();
     }, []);
 
-
-    const filterMovie = movies.filter(movie =>{
-        return movie.title.includes(search)
+    const filterTitle = movies.filter((p) => {
+        return p.title.replace(" ", "").toLocaleLowerCase().includes(search.toLocaleLowerCase().replace(" ", ""))
     })
 
-    
+
     return (
         <div>{loading ? <Loader /> :
             <div>
-                <input type="text" value={search} onChange={onChange} />
-                <div>
-
-                {movies.map(movie => <div><span>{movie.title}</span> 
-              <span>{}</span> </div> )}
-                 </div>
-
+                <Header />
+                <SearchBar value={search} onChange={onChange} />
+                <div className={styles.search__container}>
+                        {filterTitle.map(movie =>
+                            <Movie className={styles.search__movie}
+                                id={movie.id}
+                                key={movie.id}
+                                poster_path={movie.poster_path}
+                                title={movie.title}
+                                average={movie.vote_average}
+                            />
+                        )}
+                </div>
             </div>
+
         }
         </div>
 

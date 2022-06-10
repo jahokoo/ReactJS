@@ -15,6 +15,7 @@ a {
   width: 100%;
   text-align: -webkit-center;
   --swiper-theme-color: rgb(142, 26, 26);
+  margin-top:10%;
 }
 
 .swiper-button-next,
@@ -22,7 +23,7 @@ a {
   top: 43%;
 }
 
-/* header */
+/* ---------- header ---------- */
 .header {
   display: flex;
   font-size: 20px;
@@ -31,7 +32,7 @@ a {
   position: relative;
   background-color: #000;
   transition: all 1s;
-  margin: 10px 0px 10%;
+  margin: 10px 0;
 }
 
 .header a {

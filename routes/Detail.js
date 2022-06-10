@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { DATA_URL, KEY } from "./Home"
-import styles from "../css/Detail.module.css"
 import Header from "../components/Header";
 import Loader from "../components/Loader";
 import Details from "../components/Details";

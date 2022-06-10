@@ -1,17 +1,20 @@
 import Movie from "../components/Movie";
 import { useState, useEffect } from "react";
 import Header from "../components/Header";
-import { Swiper, SwiperSlide } from "swiper/react";
-import styles from "../css/styles.css";
 import Loader from "../components/Loader";
 
+//swiper
+import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
 import { EffectCoverflow, Navigation, Mousewheel } from "swiper";
+// css
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
+import styles from "../css/styles.css";
 
 export const KEY = "b20a8201e48fcb6dd7d605b15aacb7ec";
 export const DATA_URL = "https://api.themoviedb.org/3/movie/";
-
-
 
 function Home() {
     const [loading, setLoading] = useState(true);
@@ -29,8 +32,6 @@ function Home() {
     useEffect(() => {
         getMovies();
     }, [])
-
-
 
     return (
         <div>
@@ -62,7 +63,6 @@ function Home() {
                  }
              }}
          > 
-             <div className="container">
                  {movies.map(movie =>
                      <SwiperSlide>
                          <Movie
@@ -71,7 +71,7 @@ function Home() {
                              poster_path={movie.poster_path}
                              title={movie.title}
                              average={movie.vote_average}
-                         /> </SwiperSlide>)} </div>
+                         /> </SwiperSlide>)} 
          </Swiper> 
          </div>
             }

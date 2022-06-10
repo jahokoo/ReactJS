@@ -1,0 +1,32 @@
+.search__container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.search__container img{
+    -webkit-box-reflect: unset;
+}
+
+.search__container h4{
+    height: auto;
+}
+
+.input__box {
+    text-align: center;
+    position: relative;
+}
+
+.input {
+    width: 50%;
+    height: 30px;
+    font-size: 20px;
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    background: black;
+    border-bottom: 1px solid rgb(142, 26, 26);
+    color: #fff;
+}
