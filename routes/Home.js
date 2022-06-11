@@ -27,6 +27,7 @@ function Home() {
         ).json();
         setMovies(json.results);
         setLoading(false);
+        console.log(json)
     }
 
     useEffect(() => {

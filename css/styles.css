@@ -23,37 +23,6 @@ a {
   top: 43%;
 }
 
-/* ---------- header ---------- */
-.header {
-  display: flex;
-  font-size: 20px;
-  align-items: center;
-  z-index: 99;
-  position: relative;
-  background-color: #000;
-  transition: all 1s;
-  margin: 10px 0;
-}
-
-.header a {
-  transition: all 1s;
-  color: rgb(142, 26, 26);
-}
-
-.header a:hover {
-  color: #fff;
-  text-shadow: 5px 5px 10px rgb(142, 26, 26);
-}
-
-.search {
-  margin-left: 100px;
-}
-
-.login {
-  position: absolute;
-  right: 1px;
-}
-
 /* -----Loading ------*/
 .loader {
   display: inline-block;

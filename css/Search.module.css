@@ -3,11 +3,13 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    
+    margin: 100px auto;
 }
 
 .search__container img{
     -webkit-box-reflect: unset;
+    border-radius: 5px;
+    box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 22%);
 }
 
 .search__container h4{
@@ -20,6 +22,7 @@
 }
 
 .input {
+    
     width: 50%;
     height: 30px;
     font-size: 20px;
@@ -30,3 +33,4 @@
     border-bottom: 1px solid rgb(142, 26, 26);
     color: #fff;
 }
+

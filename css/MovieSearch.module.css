@@ -1,0 +1,47 @@
+.link{
+    color:#000;
+    text-decoration: none;
+    display: inherit;
+}
+
+.movie__average {
+    position: relative;
+    color: gold;
+}
+
+.movie__title {
+    margin: 5px 0px 5px;
+    overflow: hidden;
+    font-weight: lighter;
+}
+
+
+#movie {
+    display: flex;
+    width: 500px;
+    margin: 10px 10px;
+    padding: 15px;
+    background-color: floralwhite;
+    color: #000;
+    border-radius: 15px;
+    
+}
+
+
+.movie__poster {
+    margin: 10px;
+}
+
+.textArea{
+    overflow-y: auto;
+    height: 300px;
+    margin-left: 5px
+}
+.textArea::-webkit-scrollbar{
+background-color: rgba(0,0,0,.2);
+    width: 5px;
+}
+
+.movie__overview{
+    
+}

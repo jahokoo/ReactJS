@@ -31,7 +31,7 @@ Details.propTypes={
     release_date:  PropTypes.string.isRequired,
     runtime :  PropTypes.number.isRequired,
     vote_average:  PropTypes.number.isRequired,
-    genres:  PropTypes.string.isRequired,
+    genres:  PropTypes.array.isRequired,
     overview :  PropTypes.string.isRequired,
 }
 
