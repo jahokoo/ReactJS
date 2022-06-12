@@ -22,6 +22,7 @@
   .search {
     position: absolute;
     right: 0;
+    font-weight: bold;
   }
   
   .login {

@@ -11,7 +11,7 @@ function Detail() {
     const { id } = useParams();
     const getMovie = async () => {
         const json = await (
-            await fetch(`${DATA_URL}${id}?api_key=${KEY}`)
+            await fetch(`${DATA_URL}${id}?api_key=${KEY}&append_to_response=videos`)
         ).json();
         setDetails(json);
         setLoading(false);

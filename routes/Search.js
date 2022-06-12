@@ -6,10 +6,10 @@ import Header from "../components/Header";
 import SearchBar from "../components/SearchBar";
 import MovieSearch from "../components/MovieSearch";
 import styles from "../css/Search.module.css";
+import TopButton from "../components/Topbutton";
 
 function Search() {
     const [loading, setLoading] = useState(true);
-    const [pages,setPages] = useState(1);
     const [movies, setMovies] = useState([]);
     const [search, setSearch] = useState("");
     const onChange = (e) => {
@@ -35,7 +35,7 @@ function Search() {
     return (
         <div>{loading ? <Loader /> :
             <div>
-                <Header />
+                <Header /><TopButton/>
                 <SearchBar value={search} onChange={onChange} />
                 <div className={styles.search__container}>
                         {filterTitle.map(movie =>
