@@ -19,7 +19,6 @@ function TopButton() {
                 setShowButton(false)
             }
         }
-
         window.addEventListener("scroll", handleShowButton)
         return () => {
             window.removeEventListener("scroll", handleShowButton)

@@ -35,7 +35,7 @@
 }
 
 .search__find{
-    position: fixed;
+    position: absolute;
     font-size: 20px;
     left: 50%;
     transform: translateX(-50%);
