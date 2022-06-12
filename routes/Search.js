@@ -26,28 +26,42 @@ function Search() {
         getMovie();
     }, []);
 
- 
+
     const filterTitle = movies.filter((p) => {
         return p.title.replace(" ", "").toLocaleLowerCase().includes(search.toLocaleLowerCase().replace(" ", ""))
+
     })
+
+    const findMovies = () =>{
+        if(search == ""){
+            return
+        }else if(filterTitle.length > 1){
+            return <span>Found <b>{filterTitle.length}</b> movies</span>
+        }else{
+            return <span>Couldn't find the movies</span>
+        }
+    }
 
 
     return (
         <div>{loading ? <Loader /> :
             <div>
-                <Header /><TopButton/>
+                <Header /><TopButton />
                 <SearchBar value={search} onChange={onChange} />
+                <div className={styles.search__find}>
+                {findMovies()}
+                </div>
                 <div className={styles.search__container}>
-                        {filterTitle.map(movie =>
-                            <MovieSearch className={styles.search__movie}
-                                id={movie.id}
-                                key={movie.id}
-                                poster_path={movie.poster_path}
-                                title={movie.title}
-                                average={movie.vote_average}
-                                overview={movie.overview}
-                            />
-                        )}
+                    {filterTitle.map(movie =>
+                        <MovieSearch className={styles.search__movie}
+                            id={movie.id}
+                            key={movie.id}
+                            poster_path={movie.poster_path}
+                            title={movie.title}
+                            average={movie.vote_average}
+                            overview={movie.overview}
+                        />
+                    )}
                 </div>
             </div>
 
