@@ -7,6 +7,7 @@
     background-color: #000;
     transition: all 1s;
     margin: 10px 0;
+    font-weight: bold;
   }
   
   .header a {
@@ -18,15 +19,11 @@
     color: #fff;
     text-shadow: 5px 5px 10px rgb(142, 26, 26);
   }
-  
-  .search {
-    position: absolute;
-    right: 0;
-    font-weight: bold;
+  .nav{
+    display: flex;
+    margin-left: 3rem;
+
   }
-  
-  .login {
-    position: absolute;
-    right: 1px;
+  .nav_child {
+    margin-left: 2em;
   }
-  

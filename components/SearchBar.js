@@ -4,8 +4,13 @@ function SearchBar({search,onChange}) {
    
     return (
         <div className={styles.input__box}>
-            <input className={styles.input} type="text" value={search} onChange={onChange} placeholder="Search here"/>
-        </div>
+<input
+    className={styles.input}
+    type="text"
+    value={search}
+    onChange={onChange}
+    placeholder="Search here"/>       
+     </div>
     )
 }
 SearchBar.propTypes={

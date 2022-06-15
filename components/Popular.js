@@ -1,45 +1,38 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import styles from "../css/MovieSearch.module.css"
+import styles from "../css/PopularSearch.module.css"
 
-
-
-function MovieSearch({ poster_path, title, average, id, overview }) {
+function PopularSearch({ poster_path, title, vote_average, id ,category,types}) {
+    if(poster_path == null){
+        return
+     }
     return (
 
-
         <div id={styles.movie}>
-            <Link to={`/movie/${id}`} className={styles.link}>
+                
                 <div className={styles.img__container}>
+                <Link to={`/${category}/${id}`} className={styles.link}>
                     <img
                         className={styles.movie__poster}
                         src={`https://image.tmdb.org/t/p/w200${poster_path}`}
                         alt={title} />
-
-                </div>
-               
-                <div className={styles.textArea}>
+                <div className={styles.content}>
                     <h2 className={styles.movie__title}>
                         {title}
                     </h2>
-                    
-                    <span className={styles.movie__average}>⭐️ {average}</span>
-
-                    <p className={styles.movie__overview}>{overview}</p>
-
+                    <span className={styles.movie__average}>⭐️ {vote_average}</span>
+                    </div>
+                    </Link>
                 </div>
-                </Link>
         </div>
-
-
 
     );
 };
-MovieSearch.propTypes = {
+PopularSearch.propTypes = {
     id: PropTypes.number.isRequired,
     poster_path: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    average: PropTypes.number.isRequired,
-    overview: PropTypes.string.isRequired,
+    vote_average: PropTypes.number.isRequired,
+    category: PropTypes.string.isRequired,
 }
-export default MovieSearch;
+export default PopularSearch;

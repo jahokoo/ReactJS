@@ -9,21 +9,20 @@ function TopButton() {
             top: 0,
             behavior: 'smooth'
         })
-
-    }
-    useEffect(() => {
-        const handleShowButton = () => {
-            if (window.scrollY > 500) {
-                setShowButton(true)
-            } else {
-                setShowButton(false)
-            }
+    };
+    const handleShowButton = () => {
+        if (window.scrollY > 500) {
+            setShowButton(true)
+        } else {
+            setShowButton(false)
         }
+    };
+    useEffect(() => {
         window.addEventListener("scroll", handleShowButton)
         return () => {
             window.removeEventListener("scroll", handleShowButton)
         }
-    }, [])
+    }, []);
 
     return showButton && (
         <div className="scroll__container">
@@ -32,5 +31,5 @@ function TopButton() {
 
     )
 }
-// onClick={topClick}
+
 export default TopButton;

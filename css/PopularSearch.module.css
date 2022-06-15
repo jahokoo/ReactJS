@@ -13,35 +13,24 @@
     margin: 5px 0px 5px;
     overflow: hidden;
     font-weight: lighter;
+    color: #fff;
+    font-size: 15px;
+    text-align:start
 }
 
 
 #movie {
     display: flex;
-    width: 500px;
-    margin: 10px 10px;
-    padding: 15px;
-    background-color: floralwhite;
-    color: #000;
     border-radius: 15px;
-    
-}
-
-
-.movie__poster {
+    width: 200px;
     margin: 10px;
 }
 
-.textArea{
-    overflow-y: auto;
-    height: 300px;
-    margin-left: 5px
-}
-.textArea::-webkit-scrollbar{
-background-color: rgba(0,0,0,.2);
-    width: 5px;
+.movie__poster {
+    margin: 10px;
+    width: 160px;
 }
 
-.movie__overview{
-    
+.content{
+    padding: 0 20px 25px;
 }

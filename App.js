@@ -1,18 +1,19 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Detail from "./routes/Detail";
+import MovieDetail from "./routes/MovieDetail";
 import Home from "./routes/Home";
-import Search from "./routes/Search";
-import Header from "./components/Header";
-import useTitle from './hooks/useTitle';
+import Movies from "./routes/Movies";
+import TV from "./routes/TV";
+import TvDetail from "./routes/TvDetail";
 
 function App() {
-  useTitle("PopMovie");
   return (
   <Router basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route path="/" element={<Home/>} />
-      <Route path="/movie/:id" element={<Detail/>}/>
-      <Route path="/Search" element={<Search/>}/>
+      <Route path="/movie/:id" element={<MovieDetail/>}/>
+      <Route path="/movies" element={<Movies/>}/>
+      <Route path="/tv" element={<TV/>}/>
+      <Route path="/tv/:id" element={<TvDetail/>}/>
     </Routes>
   </Router>
 )}

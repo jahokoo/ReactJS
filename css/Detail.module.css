@@ -7,7 +7,7 @@
     margin-bottom:100px;
 }
 
-li{
+.li{
     background-color: #352f2f;
     list-style:none;
     display: inline-block;
@@ -41,7 +41,7 @@ li::after{
 }
 
 .overview{
-    width: 65%;
+    width: 800px;
 }
 
 .vote_average{

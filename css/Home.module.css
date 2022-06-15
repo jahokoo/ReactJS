@@ -1,0 +1,21 @@
+.top_rates_wraper {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.top_rates {
+    margin-right: 15px;
+    color: rgb(142, 26, 26);
+}
+
+.top_category {
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    padding : 10px 15px;
+    font-size: 20px;
+}
+.top_category:hover{
+    background-color: #fff;
+    color : #000;
+}

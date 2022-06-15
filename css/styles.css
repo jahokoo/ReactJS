@@ -10,17 +10,15 @@ a {
   color: #fff;
 }
 
-.hidden{
-  visibility: hidden;
-  transition: 0.5s;
-}
 
+/* topButton */
 .scroll__container{
   position: fixed;
-  bottom : 50px;
-  right : 5%;
-  z-index: 999;
+  right: 5%;
+  bottom: 5%;
+  z-index: 1;
 }
+
 #top{
   font-weight: bold;
   font-size: 15px;
@@ -32,9 +30,6 @@ a {
   outline: none;
   cursor: pointer;
 }
-#top:hover{
-  color :rgb(142, 26, 26);
-}
 
 
 /*------- Swiper slider --------- */
@@ -42,7 +37,7 @@ a {
   width: 100%;
   text-align: -webkit-center;
   --swiper-theme-color: rgb(142, 26, 26);
-  margin-top:10%;
+  /* margin-top:10%; */
 }
 
 .swiper-button-next,

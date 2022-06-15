@@ -1,20 +1,26 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../img/logo.png";
 import styles from "../css/Header.module.css";
 
 function Header() {
 
+
     return (
 
-            <div className={styles.header}>
-                <Link to={"/"} className={logo}><img src={logo}/></Link>
-                <div  className={styles.search}>
-                    <Link to={"/Search"}>
-                        Search
+        <header className={styles.header}>
+            <Link to={"/"} className={logo}><img src={logo} /></Link>
+
+            <nav className={styles.nav}>
+                <div className={styles.nav_child}>
+                    <Link to={"/movies"}>
+                        Movie
                     </Link>
                 </div>
-          
-            </div>
+                <div className={styles.nav_child}><Link to={"/tv"}>
+                    TV
+                </Link></div>
+            </nav>
+        </header>
 
 
     )
